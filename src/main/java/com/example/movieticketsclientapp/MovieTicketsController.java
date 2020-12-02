@@ -49,10 +49,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class MovieTicketsController {
 	
 	public MovieTicketsController() {
+		
 		// ***** Do all initial setup to invoke/interact with chaincodes/contracts
 		setup();
 	}
 	
+	// Initializes the Ledger with the custom values we provide
 	@PostMapping("initledger")
 	public ResponseEntity<String> initLedger(@Valid @RequestBody InitLedgerRequest initLedgerRequest)
 			throws JsonProcessingException {
@@ -61,7 +63,6 @@ public class MovieTicketsController {
 			contract.submitTransaction("init", Integer.toString(initLedgerRequest.getTheatresCount()), Integer.toString(initLedgerRequest.getScreensCount()), Integer.toString(initLedgerRequest.getShowsCount()), Integer.toString(initLedgerRequest.getMaxTicketPerShow()), Integer.toString(initLedgerRequest.getMaxSodasAvailable()) 
 ); // **** Chaincode call
 		} catch (ContractException | TimeoutException | InterruptedException e1) {
-			
 			return new ResponseEntity<String>("Failed", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
@@ -73,18 +74,17 @@ public class MovieTicketsController {
 	public ResponseEntity<IssueTicketsResponse> IssueTickets(@Valid @RequestBody TicketsRequest ticketsRquest)
 			throws JsonProcessingException {
 
-		if(ticketsRquest.getShowDate() == null) { // that means buyer is booking tickets for today
+		if(ticketsRquest.getShowDate() == null) { // If client doesn't provide date means, we are assuming that buyer wants to book tickets for today
 			ticketsRquest.setShowDate(new Date());
 		}
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String requestString = mapper.writeValueAsString(ticketsRquest);
-		
-		
+
 		byte[] issueTicketsCCResult = null;
 		
 		try {
-			// if tickets are booked, then, ChainCode returns ticket info
+			// if tickets are booked, then, ChainCode returns tickets info
 			issueTicketsCCResult = contract.submitTransaction("IssueTickets", requestString); // **** Chaincode call
 		} catch (ContractException | TimeoutException | InterruptedException e1) {
 			e1.printStackTrace();
@@ -109,7 +109,6 @@ public class MovieTicketsController {
 					ticketInfo);
 
 			return new ResponseEntity<IssueTicketsResponse>(issueTicketsResponse, HttpStatus.BAD_REQUEST);
-			
 		}
 		
 		IssueTicketsResponse issueTicketsResponse = new IssueTicketsResponse(
@@ -119,6 +118,7 @@ public class MovieTicketsController {
 				ticketInfo);
 
 		return new ResponseEntity<IssueTicketsResponse>(issueTicketsResponse, HttpStatus.OK);
+		
 	} // IssueTickets REST ends
 
 	
@@ -140,7 +140,9 @@ public class MovieTicketsController {
 		Integer noOfAvailableTickets = Integer.parseInt(new String(getNoOfAvailableTicketsCCResult, StandardCharsets.UTF_8));
 				
 		return new ResponseEntity<Integer>(noOfAvailableTickets, HttpStatus.OK);
+		
 	} // getNoOfAvailableTickets REST ends
+	
 	
 	@PutMapping("grabwaterbottleandpopcorn")
 	public ResponseEntity<IssueTicketsResponse> GrabWaterBottleAndPopcorn(@Valid @RequestBody String ticketNumber) throws JsonProcessingException {
@@ -181,6 +183,7 @@ public class MovieTicketsController {
 				ticketInfo);
 
 		return new ResponseEntity<IssueTicketsResponse>(issueTicketsResponse, HttpStatus.OK);
+		
 	} // GrabWaterBottleAndPopcorn REST ends
 	
 	
@@ -223,10 +226,12 @@ public class MovieTicketsController {
 				updatedTicketInfo);
 
 		return new ResponseEntity<IssueTicketsResponse>(issueTicketsResponse, HttpStatus.OK);
+		
 	} // ExchangeWithSoda REST ends
 	
 	
-	// this gets number of sodas are left for today
+	// Gets number of Sodas are left for today
+	// this API doesn't need any inputs
 	@GetMapping("getnoofavailablesodas")
 	public ResponseEntity<Integer> GetNoOfAvailableSodas() throws JsonProcessingException {
 		
@@ -242,6 +247,7 @@ public class MovieTicketsController {
 		Integer noOfAvailableSodas = Integer.parseInt(new String(getNoOfAvailableSodasCCResult, StandardCharsets.UTF_8));
 				
 		return new ResponseEntity<Integer>(noOfAvailableSodas, HttpStatus.OK);
+		
 	} // GetNoOfAvailableSodas REST ends
 	
 	

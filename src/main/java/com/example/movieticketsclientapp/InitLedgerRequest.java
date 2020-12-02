@@ -2,7 +2,8 @@ package com.example.movieticketsclientapp;
 
 import org.springframework.beans.factory.annotation.Value;
 
-// No field is mandatory here. If particular field's info is not passed then we set with default values, which are mentioned in problem statement
+// No field is mandatory here.
+// If particular field's info is not passed then we set with default values, which are mentioned in problem statement
 public class InitLedgerRequest {
 
 	@Value("${theatres.count:3}")

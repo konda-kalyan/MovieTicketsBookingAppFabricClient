@@ -1,1 +1,1 @@
-# OCIO_ClientApp
+Movie Tickets Booking App Fabric Client

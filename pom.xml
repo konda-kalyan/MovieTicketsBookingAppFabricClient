@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>MovieTicketsClientApp</artifactId>
+	<artifactId>MovieTicketsBookingAppFabricClient</artifactId>
 	<version>1.0</version>
-	<name>MovieTicketsClientApp</name>
-	<description>MovieTicketsClientApp using fabric-gateway-sdk</description>
+	<name>MovieTicketsBookingAppFabricClient</name>
+	<description>MovieTicketsBookingAppFabricClient using fabric-gateway-sdk</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -32,96 +32,12 @@
 		</repository>
 	</repositories>
 
-
-
 	<dependencies>
-		<!-- <dependency> <groupId>com.example</groupId> <artifactId>OCIO_DataClasses</artifactId> 
-			<scope>system</scope> <version>1.0</version> <systemPath>/home/osboxes/eclipse-workspace/OCIO_DataClasses/target/OCIO_DataClasses-1.0.jar</systemPath> 
-			</dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/com.owlike/genson -->
-		<!-- <dependency> <groupId>com.owlike</groupId> <artifactId>genson</artifactId> 
-			<version>1.5</version> </dependency> -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>22.0</version>
 		</dependency>
-
-<!-- 
-    <dependency>
-        <groupId>javax.json</groupId>
-        <artifactId>javax.json-api</artifactId>
-        <version>1.1</version>
-    </dependency>
-
-
-    <dependency>
-        <groupId>org.glassfish</groupId>
-        <artifactId>javax.json</artifactId>
-        <version>1.1</version>
-        <scope>runtime</scope>
-    </dependency>
-
-
-    <dependency>
-        <groupId>javax.json.bind</groupId>
-        <artifactId>javax.json.bind-api</artifactId>
-        <version>1.0.0-RC2</version>
-    </dependency>
-
-
-    <dependency>
-        <groupId>org.eclipse</groupId>
-        <artifactId>yasson</artifactId>
-        <version>1.0.0-RC1</version>
-        <scope>runtime</scope>
-    </dependency>
-    -->
-    
-		<!-- https://mvnrepository.com/artifact/javax.json.bind/javax.json.bind-api -->
-	<!-- 	 	 
-		<dependency>
-			<groupId>javax.json.bind</groupId>
-			<artifactId>javax.json.bind-api</artifactId>
-			<version>1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.eclipse</groupId>
-			<artifactId>yasson</artifactId>
-			<version>1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.glassfish</groupId>
-			<artifactId>javax.json</artifactId>
-			<version>1.1</version>
-		</dependency>
-	 -->	 
-
-		<!-- <dependency> <groupId>org.json</groupId> <artifactId>json</artifactId> 
-			<version>20180130</version> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/com.github.everit-org.json-schema/org.everit.json.schema -->
-		<!-- <dependency> <groupId>com.github.everit-org.json-schema</groupId> 
-			<artifactId>org.everit.json.schema</artifactId> <version>1.12.1</version> 
-			</dependency> -->
-<!-- 
-		<dependency>
-			<groupId>org.hyperledger.fabric-chaincode-java</groupId>
-			<artifactId>fabric-chaincode-shim</artifactId>
-			<version>1.4.4</version>
-		</dependency>
- -->
-
-		<!-- https://mvnrepository.com/artifact/org.hyperledger.fabric-sdk-java/fabric-sdk-java -->
-		<!-- 
-		<dependency>
-			<groupId>org.hyperledger.fabric-sdk-java</groupId>
-			<artifactId>fabric-sdk-java</artifactId>
-			<version>1.4.4</version>
-		</dependency>
- -->
 		<dependency>
 			<groupId>org.hyperledger.fabric</groupId>
 			<artifactId>fabric-gateway-java</artifactId>
