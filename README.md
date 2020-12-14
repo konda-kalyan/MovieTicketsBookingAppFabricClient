@@ -6,7 +6,7 @@ This is developed using <b>fabric-gateway-java</b> SDK and <b>Java Springboot</b
 
 Chaincode application is available at "https://github.com/konda-kalyan/MovieTicketsBookingAppChainCode".
 
-This application has been tested on <b>Fabric 1.4.4<b> network by using sample first_network (https://github.com/hyperledger/fabric-samples/tree/release-1.4/first-network)
+This application has been tested on <b>Fabric 1.4.4</b> network by using sample first_network (https://github.com/hyperledger/fabric-samples/tree/release-1.4/first-network)
 
 ### Assumptions:
 * Buyer can book any number of tickets at a time. Not limiting to book only one ticket per request.
