@@ -1,6 +1,8 @@
 ## Fabric Client application for "Movie Tickets Booking Application"
 
-This is developed using <b>fabric-gateway-java</b> SDK and <b>Springboot</b> to expose REST APIs.
+This is developed using <b>fabric-gateway-java</b> SDK and <b>Java Springboot</b> to expose REST APIs.
+
+<b>CouchDB</b> has used as State Database
 
 Chaincode application is available at "https://github.com/konda-kalyan/MovieTicketsBookingAppChainCode".
 
