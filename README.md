@@ -1,4 +1,4 @@
-## Fabric Client application for "Movie Tickets Booking Application"
+## Hyperledger Fabric Client application for "Movie Tickets Booking Application"
 
 This is developed using <b>fabric-gateway-java</b> SDK and <b>Java Springboot</b> to expose REST APIs.
 
