@@ -15,7 +15,7 @@ This application has been tested on fabric 1.4.4 network by using sample first_n
 * DONT allow partial number of tickets booking. Means, let's say buyer has asked for 10 tickets and only 5 tickets are available then don't allow to book tickets.
 * ALLOW partial number of sodas exchangewed. Means, let's say buyer has booked 10 tickets and come for Sodas exchange and only 5 sodas are available then allow buyer to exchange 5 sodas.
 
-### Highlights and Business Logic Used:
+### Implementation Highlights and Business Logic Used:
 * Solution is scalable for any number of theatres, screens, shows and tickets
 * Ticket number is generated using current time stamp
 * Issuing Water bottles, Pop-corn and exchanging Sodas are allowed for only Show Date.
