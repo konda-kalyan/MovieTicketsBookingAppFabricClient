@@ -6,6 +6,22 @@ Chaincode application is available at "https://github.com/konda-kalyan/MovieTick
 
 This application has been tested on fabric 1.4.4 network by using sample first_network (https://github.com/hyperledger/fabric-samples/tree/release-1.4/first-network)
 
+### Highlights and Business Logic Used:
+* Solution is scalable for any number of theatres, screens, shows and tickets
+* Ticket number is generated using current time stamp
+* Issuing Water bottles, Pop-corn and exchanging Sodas are allowed for only Show Date.
+* Whoever got even random number are eligible for Soda exchange
+* Partial number of Sodas can be exchanged.
+* Tickets can be booked for today or even future date. If date is not asked, then default is today.
+* At a time, any number of tickets can be booked.
+* Booking partial number of tickets are not allowed.
+
+### Improvements can be done:
+* Movie details are not captured
+* Seat numbers not considered
+* Should not allow to book for past date
+* Security should be added
+
 ### Prerequisites:
 
 * Docker and Docker-Compose
