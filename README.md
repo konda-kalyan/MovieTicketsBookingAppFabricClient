@@ -32,7 +32,7 @@ This application has been tested on fabric 1.4.4 network by using sample first_n
 	You can use Postman to do so.
 	API end points, payloads and test cases are mentioned below and also checked in [here](https://github.com/konda-kalyan/MovieTicketsBookingAppFabricClient/blob/main/MovieTicketsBooking-Testcases-Payloads.docx)
 
-\n\n
+
 
 ### Testcases & Payloads
 <b>API - 1 : Initialize Ledger</b> with custom initial values for number of theatres, screens, shows, number of tickets per show, max Sodas available
