@@ -8,6 +8,13 @@ Chaincode application is available at "https://github.com/konda-kalyan/MovieTick
 
 This application has been tested on fabric 1.4.4 network by using sample first_network (https://github.com/hyperledger/fabric-samples/tree/release-1.4/first-network)
 
+### Assumptions:
+* Buyer can book any number of tickets at a time. Not limiting to book only one ticket per request.
+* Though tickets can be booked for future date, issuing Water bottles and Sodas exchange is allowed only on show date. 
+* If date is not mentioned then, by default, tickets are booked for today.
+* DONT allow partial number of tickets booking. Means, let's say buyer has asked for 10 tickets and only 5 tickets are available then don't allow to book tickets.
+* ALLOW partial number of sodas exchangewed. Means, let's say buyer has booked 10 tickets and come for Sodas exchange and only 5 sodas are available then allow buyer to exchange 5 sodas.
+
 ### Highlights and Business Logic Used:
 * Solution is scalable for any number of theatres, screens, shows and tickets
 * Ticket number is generated using current time stamp
