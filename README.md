@@ -13,7 +13,7 @@ This application has been tested on <b>Fabric 1.4.4</b> network by using sample 
 * Though tickets can be booked for future date, issuing Water bottles and Sodas exchange is allowed only on show date. 
 * If date is not mentioned then, by default, tickets are booked for today.
 * DONT allow partial number of tickets booking. Means, let's say buyer has asked for 10 tickets and only 5 tickets are available then don't allow to book tickets.
-* ALLOW partial number of sodas exchangewed. Means, let's say buyer has booked 10 tickets and come for Sodas exchange and only 5 sodas are available then allow buyer to exchange 5 sodas.
+* ALLOW partial number of sodas exchanged. Means, let's say buyer has booked 10 tickets and come for Sodas exchange and only 5 sodas are available then allow buyer to exchange 5 sodas.
 
 ### Implementation Highlights and Business Logic Used:
 * Solution is scalable for any number of theatres, screens, shows and tickets
