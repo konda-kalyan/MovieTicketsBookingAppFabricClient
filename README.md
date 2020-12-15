@@ -231,4 +231,4 @@ GET	-> ip-address:8080/getnoofavailablesodas
 
 Positive testcases
 1.	Try to get number of Sodas remaining for today
-Negative testcases
+
